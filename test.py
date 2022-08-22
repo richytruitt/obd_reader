@@ -1,6 +1,5 @@
 import random
 import json
-import pandas as pd
 import os
 import obd
 import time
