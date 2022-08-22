@@ -10,10 +10,10 @@ connection = obd.OBD()
 
 while True:
 
-    speed = connection.query(obd.commands.SPEED).value
-    rpm = connection.query(obd.commands.RPM).value
-    oil_temp = connection.query(obd.commands.OIL_TEMP).value
-    coolant_temp = connection.query(obd.commands.COOLANT_TEMP).value
+    speed = connection.query(obd.commands.SPEED).value.to_tuple()[0]
+    rpm = connection.query(obd.commands.RPM).value.to_tuple()[0]
+    oil_temp = connection.query(obd.commands.OIL_TEMP).value.to_tuple()[0]
+    coolant_temp = connection.query(obd.commands.COOLANT_TEMP).value.to_tuple()[0]
 
     data = {
         "speed": speed,
